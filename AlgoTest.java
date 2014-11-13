@@ -5,21 +5,21 @@
  */
 public class AlgoTest {
     public static void main(String[] args) {
-    	long start = System.currentTimeMillis();
+        long start = System.currentTimeMillis();
 
         for(int num = 1; num < 20; num++) {
             System.out.println("f(" + num + ", " + num + ") = " + f(num, num));
             System.out.println("f(" + num + ", " + (num+1) + ") = " + f(num, num + 1));
         }
 
-    	long end = System.currentTimeMillis();
+        long end = System.currentTimeMillis();
 
-    	System.out.println("Test took " + ((float)(end - start) / 1000) + " seconds.");
+        System.out.println("Test took " + ((float)(end - start) / 1000) + " seconds.");
     }
     
     private static int f(int a, int b) {
         if (a == 1 && b == 1)
-    		   return 1;
+            return 1;
 
         if(a == 1)
             return 1 + f(a, b-1);
